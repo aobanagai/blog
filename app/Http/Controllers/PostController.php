@@ -8,9 +8,9 @@ use App\Models\Post;
 class PostController extends Controller
 {
     public function index(Post $post)
-{
-    return view('posts.index')->with(['posts' => $post->getPaginateBylimit(1)]);
-}
+    {
+       return view('posts/index')->with(['posts' => $post->getPaginateBylimit(1)]);
+    }
 
 public function show(Post $post)
 {
